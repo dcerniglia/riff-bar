@@ -1,102 +1,143 @@
-# RiffBar Chrome Extension
+<!-- ──────────────────────────────── -->
+<!--  R I F F  B A R   R E A D M E   -->
+<!-- ──────────────────────────────── -->
 
-RiffBar is a Chrome extension that adds a floating, draggable control bar to YouTube pages for enhanced guitar practice and video control.
+# 🎸 Riff Bar &nbsp;|&nbsp; "Home of the Reshred Button"
 
-## Features
+> A floating guitar-pedal control bar that shreds your **YouTube practice sessions** into tight, repeatable riffs.  
+> No more fumbling for the timeline—just stomp, shred, repeat. 🔥
 
-- 🎯 **Draggable Control Bar**: Move the control bar anywhere on the page
-- ⏯️ **Play/Pause**: Quick video playback control
-- ⏪⏩ **Skip Controls**: Jump forward/backward 10 seconds
-- 🏃 **Speed Control**: Cycle through playback speeds (0.25x to 2x)
-- ⛶ **Fullscreen Toggle**: Enter/exit fullscreen mode
-- 🎭 **Theater Mode**: Toggle YouTube's theater mode
-- 💾 **Position Memory**: Remembers control bar position between sessions
-- 📱 **Responsive Design**: Works on different screen sizes
+---
 
-## Installation
+## ⚡ Inspiration
+Between drop-D riffs and face-melting solos, pausing a video breaks the vibe.  
+Riff Bar borrows the **look & feel of a vintage stompbox**—knobs, LEDs, and a big chunky foot-switch—then hot-glues it right onto any YouTube page. Now you can loop, slow down, or jump back 30 seconds *without* lifting your hands off the axe (or your feet off a MIDI pedal).
 
-### From Source (Developer Mode)
+---
 
-1. Clone or download this repository
-2. Open Chrome and navigate to `chrome://extensions/`
-3. Enable "Developer mode" in the top right corner
-4. Click "Load unpacked" and select the project folder
-5. The extension should now appear in your extensions list
+## 🚀 Feature Line-Up
 
-### Icons Setup
+| 🔩  | Feature | Why It Rocks |
+|----|----------|--------------|
+| 🪄 | **Draggable "pedal" overlay** | Park it anywhere on the page—left, right, backstage. |
+| ⏯️ | **One-tap play/pause** | No more keyboard gymnastics mid-riff. |
+| 🎯 | **Reshred buttons** | Two custom control groups ("Reshred 1" & "Reshred 2") so you can shred on your guitar again. |
+| ⏪ / ⏩ | **Dual jump switches** | Rewind or fast-forward in *configurable* intervals (5s to 2min). |
+| 🏃‍♂️ | **Two speed knobs** | Dial in half-time breakdowns or hyperspeed 2× runs (0.25× to 2×). |
+| 🎚️ | **Professional tick marks** | Visual position indicators with glowing orange highlights show exactly where your knobs are set. |
+| 🔴 | **LED status lights** | Know at a glance if the pedal is active & your tone is 🔥. |
+| 💾 | **Position memory** | Riff Bar remembers exactly where you left it. |
+| 🎚️ | **MIDI-ready core** | Plug in a foot-pedal (via Web MIDI) and take hands-free control *(roadmap)*. |
+| 🎨 | **Amp-inspired popup** | Tweak settings in a slick, retro-futuristic Orbitron UI with grouped controls. |
 
-The extension requires icon files in the `icons/` directory. You can:
+---
 
-1. Add your own PNG icon files (16x16, 32x32, 48x48, 128x128 pixels)
-2. Or use any PNG images and rename them to:
-   - `icon16.png`
-   - `icon32.png` 
-   - `icon48.png`
-   - `icon128.png`
+## 🖼️ Screenshots  
+*Coming soon! Screenshots of the popup pedal interface and in-video overlay will be added here.*
 
-## Usage
+---
 
-1. Navigate to any YouTube video page
-2. The floating control bar will automatically appear in the top-right corner
-3. **Drag** the control bar by clicking and holding the header
-4. **Minimize** the control bar by clicking the "-" button
-5. Use the **popup** (click the extension icon) to:
-   - Toggle the extension on/off
-   - Reset the control bar position
-   - Refresh the current page
+## 🔧 Installation
 
-## Controls
+### Option A – Chrome Web Store *(coming soon)*
+1. Click **Add to Chrome**  
+2. Shred.
 
-| Button | Function |
-|--------|----------|
-| ⏯️ | Play/Pause video |
-| ⏪ | Skip backward 10 seconds |
-| ⏩ | Skip forward 10 seconds |
-| 1x | Cycle playback speed |
-| ⛶ | Toggle fullscreen |
-| 🎭 | Toggle theater mode |
+### Option B – Developer Mode
+1. `git clone https://github.com/dcerniglia/riff-bar.git`
+2. `chrome://extensions` → **Developer mode** → **Load unpacked** → select project folder.
+3. Profit. 🤘
 
-## Technical Details
+## 🧱 Extension Icons
 
-- **Manifest Version**: 3
-- **Permissions**: `activeTab`, `storage`
-- **Host Permissions**: `youtube.com` and `www.youtube.com`
-- **Content Script**: Injects on YouTube pages
-- **Background Script**: Service worker for extension management
+Riff Bar ships with custom PNG icons based on the official logo. These are required by Chrome for various UI elements and are located in the `/icons/` folder.
 
-## File Structure
+| Size | Preview | File |
+|------|---------|------|
+| 16×16 | ![icon16](icons/icon16.png) | `icon16.png` |
+| 32×32 | ![icon32](icons/icon32.png) | `icon32.png` |
+| 48×48 | ![icon48](icons/icon48.png) | `icon48.png` |
+| 128×128 | ![icon128](icons/icon128.png) | `icon128.png` |
+
+> 💡 You can customize the icons by replacing the PNGs in the `/icons/` directory. Just keep the sizes and filenames the same.
+---
+
+## 🎛️ Reshred Button Controls
+
+The popup features two distinct control groups designed for maximum shredding efficiency:
+
+### Reshred 1 Group
+| Control | Range | Default | Quick Tip |
+|---------|--------|---------|-----------|
+| **JUMP 1** Knob | 5s, 10s, 15s, 30s, 45s, 60s, 120s | 30s | Perfect for tricky licks. |
+| **SPEED 1** Knob | 0.25×, 0.5×, 0.75×, 1×, 1.25×, 1.5×, 1.75×, 2× | 1× | Standard practice tempo. |
+
+### Reshred 2 Group  
+| Control | Range | Default | Quick Tip |
+|---------|--------|---------|-----------|
+| **JUMP 2** Knob | 5s, 10s, 15s, 30s, 45s, 60s, 120s | 30s | Skip past dead air. |
+| **SPEED 2** Knob | 0.25×, 0.5×, 0.75×, 1×, 1.25×, 1.5×, 1.75×, 2× | 0.5× | Slow-mo riff surgery. |
+
+### Master Controls
+| UI Element | Function | Quick Tip |
+|------------|----------|-----------|
+| **ON/OFF** Switch | Enable / Bypass | True-bypass* vibe for your browser. |
+| **Tick Marks** | Visual position indicators | Glowing orange dot shows current setting. |
+
+> 🎯 **Pro Tip**: Each knob features precision tick marks around the perimeter. The current setting glows orange like a tube amp, so you always know exactly where you're dialed in.
+
+---
+
+## 🏗️ Under the Hood
+- Manifest V3 (`background.js` service worker)
+- `content.js` injected at **document_end** on any `youtube.com` domain
+- Zero external libs—pure vanilla JS + CSS (Orbitron & Roboto Condensed fonts)
+- State persistence via `chrome.storage.local`
+- Professional UI with grouped controls and visual feedback
 
 ```
-riffbar/
-├── manifest.json          # Extension manifest
-├── content.js             # Main content script
-├── styles.css             # Control bar styles
-├── background.js          # Background service worker
-├── popup.html             # Extension popup interface
-├── popup.css              # Popup styles
-├── popup.js               # Popup functionality
-├── icons/                 # Extension icons
-│   ├── icon16.png
-│   ├── icon32.png
-│   ├── icon48.png
-│   └── icon128.png
-└── README.md              # This file
+riff-bar/
+├─ manifest.json        # Extension manifest
+├─ background.js        # Service worker
+├─ content.js           # Injected control logic
+├─ styles.css           # Overlay styling
+├─ popup.html           # Popup interface
+├─ popup.css            # Popup styling
+├─ popup.js             # Popup logic
+├─ icons/               # 16, 32, 48, 128 px PNGs
+└─ README.md            # This file
 ```
 
-## Development
+---
 
-To modify the extension:
+## 🛠️ Development Workflow
+```bash
+# install deps (if you add tooling)
+npm i
 
-1. Make changes to the source files
-2. Go to `chrome://extensions/`
-3. Click the refresh icon on the extension card
-4. Reload any YouTube pages to see changes
+# hack, save, and in Chrome:
+chrome://extensions → 🔄 Reload
+# then refresh any YouTube tab
 
-## Browser Compatibility
 
-- Chrome (Manifest V3)
-- Chromium-based browsers (Edge, Brave, etc.)
+---
 
-## License
+## 🔮 Roadmap
+- 🎚️ Full Web MIDI support for hands-free foot-controller action
+- ⌨️ Custom hotkeys so keyboard heroes can jam too
+- 🌙 Dark-amp theme (black tolex & glowing tubes)
+- 🌐 Firefox & Edge ports
 
-This project is open source and available under the MIT License. 
+Contributions welcome—open a PR, file an issue, or just send riffs.
+If it makes the extension louder, faster, or cooler, we're in. 🤟
+
+---
+
+## 📝 License
+
+MIT—because good code (and good music) should be shared.
+
+---
+
+Riff Bar is built with ❤️, caffeine, and palm-muted power chords.
+See you in the comments section—let's jam! 🤘
