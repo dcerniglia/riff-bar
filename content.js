@@ -46,92 +46,80 @@ class YouTubeControlBar {
         <button class="control-bar-minimize" title="Minimize">−</button>
       </div>
       <div class="control-bar-content">
-        <button class="control-btn play-btn" id="play-pause-btn" title="Play/Pause">
-          <div class="control-btn-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
-            </svg>
-          </div>
-          <div class="control-btn-label">PLAY</div>
-        </button>
-        <button class="control-btn" id="skip-back-btn" title="Skip Back 10s">
-          <div class="control-btn-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 21 8.689v8.122ZM11.25 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 11.25 8.689v8.122Z" />
-            </svg>
-          </div>
-          <div class="control-btn-label">-10S</div>
-        </button>
-        <button class="control-btn" id="skip-forward-btn" title="Skip Forward 10s">
-          <div class="control-btn-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061A1.125 1.125 0 0 1 3 16.811V8.69ZM12.75 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061a1.125 1.125 0 0 1-1.683-.977V8.69Z" />
-            </svg>
-          </div>
-          <div class="control-btn-label">+10S</div>
-        </button>
-        <button class="control-btn speed-btn" id="speed-btn" title="Playback Speed">
-          <div class="control-btn-icon">
-            <span class="speed-display">1.0×</span>
-          </div>
-          <div class="control-btn-label">SPEED</div>
-        </button>
-        <button class="control-btn" id="fullscreen-btn" title="Toggle Fullscreen">
-          <div class="control-btn-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
-            </svg>
-          </div>
-          <div class="control-btn-label">FULL</div>
-        </button>
-        <button class="control-btn" id="theater-btn" title="Theater Mode">
-          <div class="control-btn-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 20.25h12m-7.5-3v3m3-3v3m-10.125-3h17.25c.621 0 1.125-.504 1.125-1.125V4.875c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125Z" />
-            </svg>
-          </div>
-          <div class="control-btn-label">THEATER</div>
-        </button>
-        <button class="control-btn guitar-btn" id="guitar-btn-1" title="Guitar Practice Button 1">
-          <div class="guitar-button-number">1</div>
-          <div class="guitar-button-layout">
-            <div class="guitar-button-arrow">
-              <svg class="value-icon-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+        <div class="control-bar-row top-row">
+          <button class="control-btn play-btn" id="play-pause-btn" title="Play/Pause">
+            <div class="control-btn-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+              </svg>
+            </div>
+            <div class="control-btn-label">PLAY</div>
+          </button>
+          <button class="control-btn" id="skip-back-btn" title="Skip Back 10s">
+            <div class="control-btn-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 21 8.689v8.122ZM11.25 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 11.25 8.689v8.122Z" />
               </svg>
             </div>
-            <div class="guitar-button-values">
-              <div class="value-row jump-row">
-                <span class="value-number">30</span>
-                <span class="value-unit">sec</span>
-              </div>
-              <div class="value-row speed-row">
-                <span class="value-number">1.0</span>
-                <span class="value-unit">x</span>
-              </div>
-            </div>
-          </div>
-        </button>
-        <button class="control-btn guitar-btn" id="guitar-btn-2" title="Guitar Practice Button 2">
-          <div class="guitar-button-number">2</div>
-          <div class="guitar-button-layout">
-            <div class="guitar-button-arrow">
-              <svg class="value-icon-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 21 8.689v8.122ZM11.25 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 11.25 8.689v8.122Z" />
+            <div class="control-btn-label">-10S</div>
+          </button>
+          <button class="control-btn" id="skip-forward-btn" title="Skip Forward 10s">
+            <div class="control-btn-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061A1.125 1.125 0 0 1 3 16.811V8.69ZM12.75 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061a1.125 1.125 0 0 1-1.683-.977V8.69Z" />
               </svg>
             </div>
-            <div class="guitar-button-values">
-              <div class="value-row jump-row">
-                <span class="value-number">30</span>
-                <span class="value-unit">sec</span>
+            <div class="control-btn-label">+10S</div>
+          </button>
+          <button class="control-btn speed-btn" id="speed-btn" title="Playback Speed">
+            <div class="control-btn-icon">
+              <span class="speed-display">1.0×</span>
+            </div>
+            <div class="control-btn-label">SPEED</div>
+          </button>
+        </div>
+        <div class="control-bar-row bottom-row">
+          <button class="control-btn guitar-btn" id="guitar-btn-1" title="Guitar Practice Button 1">
+            <div class="guitar-button-number">1</div>
+            <div class="guitar-button-layout">
+              <div class="guitar-button-arrow">
+                <svg class="value-icon-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 21 8.689v8.122ZM11.25 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 11.25 8.689v8.122Z" />
+                </svg>
               </div>
-              <div class="value-row speed-row">
-                <span class="value-number">0.5</span>
-                <span class="value-unit">x</span>
+              <div class="guitar-button-values">
+                <div class="value-row jump-row">
+                  <span class="value-number">30</span>
+                  <span class="value-unit">sec</span>
+                </div>
+                <div class="value-row speed-row">
+                  <span class="value-number">1.0</span>
+                  <span class="value-unit">x</span>
+                </div>
               </div>
             </div>
-          </div>
-        </button>
+          </button>
+          <button class="control-btn guitar-btn" id="guitar-btn-2" title="Guitar Practice Button 2">
+            <div class="guitar-button-number">2</div>
+            <div class="guitar-button-layout">
+              <div class="guitar-button-arrow">
+                <svg class="value-icon-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 21 8.689v8.122ZM11.25 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 11.25 8.689v8.122Z" />
+                </svg>
+              </div>
+              <div class="guitar-button-values">
+                <div class="value-row jump-row">
+                  <span class="value-number">30</span>
+                  <span class="value-unit">sec</span>
+                </div>
+                <div class="value-row speed-row">
+                  <span class="value-number">0.5</span>
+                  <span class="value-unit">x</span>
+                </div>
+              </div>
+            </div>
+          </button>
+        </div>
       </div>
       <div class="control-bar-resize-handle" title="Drag to resize">⋰</div>
     `;
@@ -176,8 +164,7 @@ class YouTubeControlBar {
     this.controlBar.querySelector('#skip-back-btn').addEventListener('click', () => this.skipTime(-10));
     this.controlBar.querySelector('#skip-forward-btn').addEventListener('click', () => this.skipTime(10));
     this.controlBar.querySelector('#speed-btn').addEventListener('click', this.toggleSpeed.bind(this));
-    this.controlBar.querySelector('#fullscreen-btn').addEventListener('click', this.toggleFullscreen.bind(this));
-    this.controlBar.querySelector('#theater-btn').addEventListener('click', this.toggleTheaterMode.bind(this));
+
     this.controlBar.querySelector('#guitar-btn-1').addEventListener('click', () => this.guitarPracticeJump(1));
     this.controlBar.querySelector('#guitar-btn-2').addEventListener('click', () => this.guitarPracticeJump(2));
   }
@@ -257,105 +244,48 @@ class YouTubeControlBar {
     const content = this.controlBar.querySelector('.control-bar-content');
     
     // Calculate responsive sizing based on container size
-    const baseWidth = 280; // Original design width
-    const scaleFactor = width / baseWidth;
+    const baseWidth = 320; // Updated design width for new layout
+    const scaleFactor = Math.max(0.7, Math.min(1.5, width / baseWidth)); // Constrain scaling
     
-    // Adjust grid layout based on width and height
-    const buttonWidth = 60 * scaleFactor;
-    const padding = 32 * scaleFactor;
-    const availableWidth = width - padding;
+    // Use fixed grid layout - don't override CSS
+    // Grid: 4 columns x 2 rows
+    // Top row: 4 regular buttons (1 column each)
+    // Bottom row: 2 guitar buttons (2 columns each)
+    
+    const padding = 20; // Fixed padding
     const availableHeight = height - 60; // Account for header height
     
-    // Calculate optimal grid layout
-    const totalButtons = 8;
-    let columns, rows;
-    
-    if (availableWidth < 200) {
-      columns = 2;
-    } else if (availableWidth < 300) {
-      columns = 3;
-    } else {
-      columns = 4;
-    }
-    
-    rows = Math.ceil(totalButtons / columns);
-    
-    // Set grid template
-    content.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
-    content.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
-    
-    // Ensure content fills available height
-    const contentHeight = availableHeight - (padding * 2);
-    content.style.minHeight = Math.max(120, contentHeight) + 'px';
-    
-    // Set CSS custom properties for responsive sizing
+    // Set CSS custom properties for responsive sizing (minimal scaling)
     this.controlBar.style.setProperty('--scale-factor', scaleFactor);
-    this.controlBar.style.setProperty('--container-width', width + 'px');
-    this.controlBar.style.setProperty('--container-height', height + 'px');
     
-    // Update dynamic sizing
+    // Only apply minimal scaling to icons and text, let CSS handle layout
     const buttons = this.controlBar.querySelectorAll('.control-btn');
     buttons.forEach(button => {
-      // Remove fixed height to let buttons fill available space
-      button.style.height = '';
-      
-      // Scale SVG icons and text
       const icon = button.querySelector('.control-btn-icon');
       const label = button.querySelector('.control-btn-label');
       
       if (icon) {
-        const baseIconSize = 16;
-        const newIconSize = Math.max(12, Math.min(28, baseIconSize * scaleFactor));
+        // Minimal icon scaling
+        const baseIconSize = 18;
+        const newIconSize = Math.max(16, Math.min(24, baseIconSize * scaleFactor));
         icon.style.fontSize = newIconSize + 'px';
         
-        // Handle guitar button dual icons
-        if (button.classList.contains('guitar-btn')) {
-          const guitarIcon = button.querySelector('.guitar-icon');
-          const backIcon = button.querySelector('.back-icon');
-          if (guitarIcon) {
-            guitarIcon.style.width = (newIconSize * 0.9) + 'px';
-            guitarIcon.style.height = (newIconSize * 0.9) + 'px';
-          }
-          if (backIcon) {
-            backIcon.style.width = (newIconSize * 0.7) + 'px';
-            backIcon.style.height = (newIconSize * 0.7) + 'px';
-          }
-        }
-        
-        // Handle speed button text
+        // Handle speed button display
         if (button.id === 'speed-btn') {
-          const speedText = button.querySelector('.speed-text');
-          if (speedText) {
-            speedText.style.fontSize = (newIconSize * 0.6) + 'px';
+          const speedDisplay = button.querySelector('.speed-display');
+          if (speedDisplay) {
+            speedDisplay.style.fontSize = Math.max(12, Math.min(16, 14 * scaleFactor)) + 'px';
           }
         }
       }
       
       if (label) {
-        const baseLabelSize = 9;
-        const newLabelSize = Math.max(7, Math.min(14, baseLabelSize * scaleFactor));
+        // Minimal label scaling
+        const baseLabelSize = 8;
+        const newLabelSize = Math.max(7, Math.min(10, baseLabelSize * scaleFactor));
         label.style.fontSize = newLabelSize + 'px';
       }
-      
-      // Scale padding proportionally but keep it reasonable
-      const basePadding = 12;
-      const newPadding = Math.max(8, Math.min(20, basePadding * scaleFactor));
-      button.style.padding = `${newPadding}px ${newPadding * 0.7}px`;
-      
-      // Scale border radius
-      const baseBorderRadius = 10;
-      const newBorderRadius = Math.max(6, Math.min(16, baseBorderRadius * scaleFactor));
-      button.style.borderRadius = newBorderRadius + 'px';
     });
-    
-    // Scale gap and padding
-    const baseGap = 8;
-    const basePadding = 16;
-    const newGap = Math.max(4, Math.min(12, baseGap * scaleFactor));
-    const newPadding = Math.max(8, Math.min(24, basePadding * scaleFactor));
-    
-    content.style.gap = newGap + 'px';
-    content.style.padding = newPadding + 'px';
   }
 
   stopResizing() {

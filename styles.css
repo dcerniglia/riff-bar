@@ -14,8 +14,9 @@
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 13px;
   color: white;
-  width: 320px;
-  min-width: 280px;
+  width: 360px;
+  height: 200px;
+  min-width: 320px;
   min-height: 180px;
   user-select: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -98,15 +99,28 @@
 
 /* ===== PEDAL CONTROLS ===== */
 .control-bar-content {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 12px;
   padding: 20px;
   flex: 1;
   overflow: hidden;
   height: 100%;
-  align-content: stretch;
   container-type: inline-size;
+}
+
+.control-bar-row {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+}
+
+.control-bar-row.top-row .control-btn {
+  flex: 1;
+}
+
+.control-bar-row.bottom-row .control-btn {
+  flex: 1;
 }
 
 .control-btn {
@@ -266,6 +280,10 @@
   min-height: 70px !important;
 }
 
+
+
+
+
 .guitar-btn::before {
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
 }
@@ -298,26 +316,26 @@
 .guitar-button-layout {
   display: flex !important;
   align-items: center !important;
-  justify-content: flex-start !important;
-  gap: 4px !important;
+  justify-content: center !important;
+  gap: 12px !important;
   width: 100% !important;
   height: 100% !important;
+  padding: 0 8px !important;
 }
 
 .guitar-button-arrow {
+  margin-left: 5rem;
   display: flex !important;
   align-items: center !important;
-  justify-content: flex-start !important;
+  justify-content: center !important;
   flex-shrink: 0 !important;
-  padding-left: 8px !important;
-  width: 32px !important;
 }
 
 .guitar-button-values {
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
-  gap: 2px !important;
+  gap: 3px !important;
   flex: 1 !important;
 }
 
@@ -325,7 +343,7 @@
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 2px !important;
+  gap: 4px !important;
   width: 100% !important;
 }
 
