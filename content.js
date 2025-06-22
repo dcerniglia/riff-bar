@@ -49,24 +49,32 @@ class YouTubeControlBar {
         <div class="control-bar-row top-row">
           <button class="control-btn play-btn" id="play-pause-btn" title="Play/Pause">
             <div class="control-btn-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 6 17 12 9 18" />
               </svg>
             </div>
             <div class="control-btn-label">PLAY</div>
           </button>
           <button class="control-btn" id="skip-back-btn" title="Skip Back 10s">
             <div class="control-btn-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 21 8.689v8.122ZM11.25 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 11.25 8.689v8.122Z" />
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <!-- pick outline -->
+                <path d="M12 2c5 0 9 4 9 9s-4 11-9 11S3 16 3 11 7 2 12 2z"/>
+                <!-- double-arrow -->
+                <polyline points="13 8 9 12 13 16" />
+                <polyline points="17 8 13 12 17 16" />
               </svg>
             </div>
             <div class="control-btn-label">-10S</div>
           </button>
           <button class="control-btn" id="skip-forward-btn" title="Skip Forward 10s">
             <div class="control-btn-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061A1.125 1.125 0 0 1 3 16.811V8.69ZM12.75 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061a1.125 1.125 0 0 1-1.683-.977V8.69Z" />
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <!-- pick outline -->
+                <path d="M12 2c5 0 9 4 9 9s-4 11-9 11S3 16 3 11 7 2 12 2z"/>
+                <!-- double-arrow -->
+                <polyline points="11 8 15 12 11 16" />
+                <polyline points="7 8 11 12 7 16" />
               </svg>
             </div>
             <div class="control-btn-label">+10S</div>
@@ -83,8 +91,12 @@ class YouTubeControlBar {
             <div class="guitar-button-number">1</div>
             <div class="guitar-button-layout">
               <div class="guitar-button-arrow">
-                <svg class="value-icon-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 21 8.689v8.122ZM11.25 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 11.25 8.689v8.122Z" />
+                <svg class="value-icon-svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <!-- pick outline -->
+                  <path d="M12 2c5 0 9 4 9 9s-4 11-9 11S3 16 3 11 7 2 12 2z"/>
+                  <!-- double-arrow -->
+                  <polyline points="13 8 9 12 13 16" />
+                  <polyline points="17 8 13 12 17 16" />
                 </svg>
               </div>
               <div class="guitar-button-values">
@@ -103,8 +115,12 @@ class YouTubeControlBar {
             <div class="guitar-button-number">2</div>
             <div class="guitar-button-layout">
               <div class="guitar-button-arrow">
-                <svg class="value-icon-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 21 8.689v8.122ZM11.25 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 11.25 8.689v8.122Z" />
+                <svg class="value-icon-svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <!-- pick outline -->
+                  <path d="M12 2c5 0 9 4 9 9s-4 11-9 11S3 16 3 11 7 2 12 2z"/>
+                  <!-- double-arrow -->
+                  <polyline points="13 8 9 12 13 16" />
+                  <polyline points="17 8 13 12 17 16" />
                 </svg>
               </div>
               <div class="guitar-button-values">
@@ -318,7 +334,7 @@ class YouTubeControlBar {
         const svg = playPauseBtn.querySelector('.control-btn-icon svg');
         const label = playPauseBtn.querySelector('.control-btn-label');
         if (svg) {
-          svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" />';
+          svg.innerHTML = '<line x1="10" y1="6" x2="10" y2="18" stroke-width="3" /><line x1="15" y1="6" x2="15" y2="18" stroke-width="3" />';
         }
         if (label) label.textContent = 'PAUSE';
       } else {
@@ -326,7 +342,7 @@ class YouTubeControlBar {
         const svg = playPauseBtn.querySelector('.control-btn-icon svg');
         const label = playPauseBtn.querySelector('.control-btn-label');
         if (svg) {
-          svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />';
+          svg.innerHTML = '<polyline points="9 6 17 12 9 18" />';
         }
         if (label) label.textContent = 'PLAY';
       }
