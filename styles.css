@@ -196,10 +196,10 @@
 
 /* ===== SPECIAL BUTTON STYLES ===== */
 
-/* Play/Pause - Red Stomp Switch Style */
+/* Play/Pause - Orange/Yellow Stomp Switch Style */
 .play-btn {
-  background: linear-gradient(145deg, #ff3333, #cc0000);
-  border-color: #aa0000;
+  background: linear-gradient(145deg, #ff8c00, #ffa500);
+  border-color: #e67e00;
   color: white;
   position: relative;
 }
@@ -209,17 +209,17 @@
 }
 
 .play-btn:hover {
-  background: linear-gradient(145deg, #ff4444, #dd0000);
-  border-color: #bb0000;
+  background: linear-gradient(145deg, #ff9500, #ffb000);
+  border-color: #f08000;
   box-shadow: 
-    0 6px 20px rgba(255, 0, 0, 0.4),
-    0 0 16px rgba(255, 0, 0, 0.3),
+    0 6px 20px rgba(255, 140, 0, 0.4),
+    0 0 16px rgba(255, 140, 0, 0.3),
     inset 0 1px 2px rgba(255, 255, 255, 0.2);
 }
 
 .play-btn:active {
   box-shadow: 
-    0 2px 8px rgba(255, 0, 0, 0.4),
+    0 2px 8px rgba(255, 140, 0, 0.4),
     inset 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 

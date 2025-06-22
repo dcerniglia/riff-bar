@@ -6,8 +6,8 @@
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 380px;
+  height: 520px;
   margin: 0;
   padding: 0;
   font-family: 'Roboto Condensed', sans-serif;
@@ -20,7 +20,7 @@ body {
   background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
   border: 3px solid #333;
   border-radius: 12px;
-  padding: 20px;
+  padding: 18px;
   box-shadow: 
     0 8px 32px rgba(0, 0, 0, 0.8),
     inset 0 1px 0 rgba(255, 255, 255, 0.1),
@@ -31,17 +31,19 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 /* ===== PEDAL HEADER ===== */
 .pedal-header {
   text-align: center;
-  margin-bottom: 25px;
-  padding: 15px 0;
+  margin-bottom: 18px;
+  padding: 12px 0;
   border-bottom: 2px solid #333;
   background: linear-gradient(145deg, #333, #222);
   border-radius: 8px;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
 }
 
 .brand-logo {
@@ -67,7 +69,8 @@ body {
 
 /* ===== KNOBS SECTION ===== */
 .knobs-section {
-  margin-bottom: 25px;
+  margin-bottom: 18px;
+  flex-shrink: 0;
 }
 
 .knob-container {
@@ -141,7 +144,8 @@ body {
   display: flex;
   justify-content: center;
   gap: 40px;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
+  flex-shrink: 0;
 }
 
 .led-indicator {
@@ -191,7 +195,8 @@ body {
 .stomp-section {
   display: flex;
   justify-content: center;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
+  flex-shrink: 0;
 }
 
 .stomp-switch {
@@ -228,11 +233,11 @@ body {
 }
 
 .stomp-switch.active .stomp-surface {
-  background: linear-gradient(145deg, #ff3333, #cc0000);
-  border-color: #aa0000;
+  background: linear-gradient(145deg, #ff8c00, #ffa500);
+  border-color: #e67e00;
   box-shadow: 
     0 6px 20px rgba(0, 0, 0, 0.8),
-    0 0 16px rgba(255, 0, 0, 0.6),
+    0 0 16px rgba(255, 140, 0, 0.6),
     inset 0 2px 4px rgba(255, 255, 255, 0.2),
     inset 0 -2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -252,6 +257,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: auto;
+  flex-shrink: 0;
 }
 
 .small-controls {
@@ -291,13 +298,13 @@ body {
 }
 
 .pedal-button.primary {
-  background: linear-gradient(145deg, #ff3333, #cc0000);
-  border-color: #aa0000;
+  background: linear-gradient(145deg, #ff8c00, #ffa500);
+  border-color: #e67e00;
 }
 
 .pedal-button.primary:hover {
-  background: linear-gradient(145deg, #ff4444, #dd0000);
-  border-color: #bb0000;
+  background: linear-gradient(145deg, #ff9500, #ffb000);
+  border-color: #f08000;
 }
 
 .button-text {
