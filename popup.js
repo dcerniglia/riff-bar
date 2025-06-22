@@ -237,6 +237,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!indicatorGroup) return;
     
     let rotation = 0;
+    let activeIndex = -1;
     
     switch (setting) {
       case 'jumpInterval1':
@@ -248,6 +249,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentJumpValue = setting === 'jumpInterval1' ? settings.jumpInterval1 : settings.jumpInterval2;
         const jumpIndex = jumpValues.indexOf(currentJumpValue);
         rotation = jumpIndex >= 0 ? jumpTickPositions[jumpIndex] : 0;
+        activeIndex = jumpIndex;
         break;
         
       case 'button1Speed':
@@ -259,10 +261,26 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentSpeedValue = setting === 'button1Speed' ? settings.button1Speed : settings.button2Speed;
         const speedIndex = speedValues.indexOf(currentSpeedValue);
         rotation = speedIndex >= 0 ? speedTickPositions[speedIndex] : 0;
+        activeIndex = speedIndex;
         break;
     }
     
     indicatorGroup.style.transform = `rotate(${rotation}deg)`;
+    
+    // Update active tick mark
+    updateActiveTick(knob, activeIndex);
+  }
+
+  function updateActiveTick(knob, activeIndex) {
+    const tickMarks = knob.querySelectorAll('.tick-marks circle');
+    
+    // Remove active class from all tick marks
+    tickMarks.forEach(tick => tick.classList.remove('active'));
+    
+    // Add active class to the current tick mark
+    if (activeIndex >= 0 && activeIndex < tickMarks.length) {
+      tickMarks[activeIndex].classList.add('active');
+    }
   }
 
   function updateAllKnobDisplays() {

@@ -425,12 +425,24 @@ body {
 .tick-marks circle {
   fill: #fff;
   opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.tick-marks circle.active {
+  fill: #ff6600;
+  opacity: 1;
+  filter: drop-shadow(0 0 8px rgba(255, 102, 0, 0.8));
 }
 
 .large-knob:hover .tick-marks circle {
   fill: #fff;
   opacity: 1;
   r: 2;
+}
+
+.large-knob:hover .tick-marks circle.active {
+  fill: #ff6600;
+  filter: drop-shadow(0 0 12px rgba(255, 102, 0, 1));
 }
 
 /* ===== RESPONSIVE ADJUSTMENTS ===== */
