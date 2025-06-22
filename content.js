@@ -1,7 +1,7 @@
 // RiffBar Content Script
 // Prevent multiple instances
 if (window.RiffBarInstance) {
-  console.log('RiffBar already loaded, skipping initialization');
+  console.log('Riff Bar already loaded, skipping initialization');
 } else {
 
 class YouTubeControlBar {
@@ -42,7 +42,7 @@ class YouTubeControlBar {
     // Add control buttons
     this.controlBar.innerHTML = `
       <div class="control-bar-header">
-        <span class="control-bar-title">RIFFBAR</span>
+        <span class="control-bar-title">Riff Bar</span>
         <button class="control-bar-minimize" title="Minimize">−</button>
       </div>
       <div class="control-bar-content">

@@ -3,7 +3,7 @@
 // Handle extension installation
 chrome.runtime.onInstalled.addListener((details) => {
   if (details.reason === 'install') {
-    console.log('RiffBar extension installed');
+    console.log('Rif fBar extension installed');
     
     // Set default settings
     chrome.storage.local.set({

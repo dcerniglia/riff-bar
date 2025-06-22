@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "RiffBar",
+  "name": "Riff Bar",
   "version": "1.0.0",
-  "description": "RiffBar - A floating control bar for YouTube guitar practice",
+  "description": "Riff Bar - A floating control bar for YouTube guitar practice",
   "permissions": [
     "activeTab",
     "storage",
@@ -25,7 +25,7 @@
   ],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "RiffBar",
+    "default_title": "Riff Bar",
     "default_icon": {
       "16": "icons/icon16.png",
       "32": "icons/icon32.png",
