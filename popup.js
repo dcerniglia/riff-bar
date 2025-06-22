@@ -158,7 +158,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     switch (setting) {
       case 'jumpInterval1':
-        settings.jumpInterval1 = Math.max(5, Math.min(120, settings.jumpInterval1 + delta * 5));
+        const jumpValues1 = [5, 10, 15, 30, 45, 60, 120];
+        const currentJumpIndex1 = jumpValues1.indexOf(settings.jumpInterval1);
+        const newJumpIndex1 = Math.max(0, Math.min(jumpValues1.length - 1, currentJumpIndex1 + delta));
+        settings.jumpInterval1 = jumpValues1[newJumpIndex1];
         break;
         
       case 'button1Speed':
@@ -169,7 +172,10 @@ document.addEventListener('DOMContentLoaded', function() {
         break;
         
       case 'jumpInterval2':
-        settings.jumpInterval2 = Math.max(5, Math.min(120, settings.jumpInterval2 + delta * 5));
+        const jumpValues2 = [5, 10, 15, 30, 45, 60, 120];
+        const currentJumpIndex2 = jumpValues2.indexOf(settings.jumpInterval2);
+        const newJumpIndex2 = Math.max(0, Math.min(jumpValues2.length - 1, currentJumpIndex2 + delta));
+        settings.jumpInterval2 = jumpValues2[newJumpIndex2];
         break;
         
       case 'button2Speed':
@@ -234,20 +240,25 @@ document.addEventListener('DOMContentLoaded', function() {
     
     switch (setting) {
       case 'jumpInterval1':
-        // Map 5-120 to -135 to 135 degrees
-        rotation = ((settings.jumpInterval1 - 5) / (120 - 5)) * 270 - 135;
-        break;
-      case 'button1Speed':
-        // Map 0.25-2 to -135 to 135 degrees
-        rotation = ((settings.button1Speed - 0.25) / (2 - 0.25)) * 270 - 135;
-        break;
       case 'jumpInterval2':
-        // Map 5-120 to -135 to 135 degrees
-        rotation = ((settings.jumpInterval2 - 5) / (120 - 5)) * 270 - 135;
+        // Jump intervals: [5, 10, 15, 30, 45, 60, 120]
+        // Tick positions: [-135, -90, -45, 0, 45, 90, 135] degrees
+        const jumpValues = [5, 10, 15, 30, 45, 60, 120];
+        const jumpTickPositions = [-135, -90, -45, 0, 45, 90, 135];
+        const currentJumpValue = setting === 'jumpInterval1' ? settings.jumpInterval1 : settings.jumpInterval2;
+        const jumpIndex = jumpValues.indexOf(currentJumpValue);
+        rotation = jumpIndex >= 0 ? jumpTickPositions[jumpIndex] : 0;
         break;
+        
+      case 'button1Speed':
       case 'button2Speed':
-        // Map 0.25-2 to -135 to 135 degrees
-        rotation = ((settings.button2Speed - 0.25) / (2 - 0.25)) * 270 - 135;
+        // Speed values: [0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2]
+        // Tick positions: [-135, -96.43, -57.86, -19.29, 19.29, 57.86, 96.43, 135] degrees
+        const speedValues = [0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2];
+        const speedTickPositions = [-135, -96.43, -57.86, -19.29, 19.29, 57.86, 96.43, 135];
+        const currentSpeedValue = setting === 'button1Speed' ? settings.button1Speed : settings.button2Speed;
+        const speedIndex = speedValues.indexOf(currentSpeedValue);
+        rotation = speedIndex >= 0 ? speedTickPositions[speedIndex] : 0;
         break;
     }
     

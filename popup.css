@@ -421,6 +421,18 @@ body {
   transform: translate(-50%, 0) rotate(0deg);
 }
 
+/* ===== KNOB TICK MARKS ===== */
+.tick-marks circle {
+  fill: #fff;
+  opacity: 0.9;
+}
+
+.large-knob:hover .tick-marks circle {
+  fill: #fff;
+  opacity: 1;
+  r: 2;
+}
+
 /* ===== RESPONSIVE ADJUSTMENTS ===== */
 @media (max-width: 400px) {
   body {
