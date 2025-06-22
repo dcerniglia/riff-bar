@@ -27,13 +27,17 @@ Riff Bar borrows the **look & feel of a vintage stompbox**—knobs, LEDs, and a 
 | 🎚️ | **Professional tick marks** | Visual position indicators with glowing orange highlights show exactly where your knobs are set. |
 | 🔴 | **LED status lights** | Know at a glance if the pedal is active & your tone is 🔥. |
 | 💾 | **Position memory** | Riff Bar remembers exactly where you left it. |
-| 🎚️ | **MIDI-ready core** | Plug in a foot-pedal (via Web MIDI) and take hands-free control *(roadmap)*. |
 | 🎨 | **Amp-inspired popup** | Tweak settings in a slick, retro-futuristic Orbitron UI with grouped controls. |
+| 🎚️ | **MIDI-ready core** | Plug in a foot-pedal (via Web MIDI) and take hands-free control *(roadmap)*. |
 
 ---
 
 ## 🖼️ Screenshots  
-*Coming soon! Screenshots of the popup pedal interface and in-video overlay will be added here.*
+
+|   |   |
+|---|---|
+| **Popup Pedal Interface** | **In-Video Overlay** |
+| ![Popup](docs/screenshots/popup.png) | ![Overlay](docs/screenshots/overlay.png) |
 
 ---
 
