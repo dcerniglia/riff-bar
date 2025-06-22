@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RiffBar Guitar Pedal</title>
+  <link rel="stylesheet" href="popup.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="pedal-container">
+    <!-- Pedal Header -->
+    <div class="pedal-header">
+      <div class="brand-logo">RiffBar</div>
+      <div class="model-name">GUITAR PRACTICE DELAY</div>
+    </div>
+    
+    <!-- Control Knobs Section -->
+    <div class="knobs-section">
+      <div class="knob-container">
+        <div class="knob-group">
+          <div class="large-knob" data-setting="jumpInterval1">
+            <svg class="knob-svg" viewBox="0 0 60 60">
+              <defs>
+                <radialGradient id="knobGradient1" cx="30%" cy="30%">
+                  <stop offset="0%" stop-color="#f5f5f5"/>
+                  <stop offset="30%" stop-color="#ddd"/>
+                  <stop offset="60%" stop-color="#aaa"/>
+                  <stop offset="90%" stop-color="#777"/>
+                </radialGradient>
+              </defs>
+              <circle cx="30" cy="30" r="27" fill="url(#knobGradient1)" stroke="#333" stroke-width="3"/>
+              <g class="knob-indicator-group" transform-origin="30 30">
+                <rect x="28.5" y="6" width="3" height="18" rx="1.5" fill="#333"/>
+              </g>
+              <circle cx="30" cy="30" r="6" fill="url(#knobGradient1)" stroke="#222" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="knob-label">JUMP 1</div>
+          <div class="knob-value" id="jump1Value">30s</div>
+        </div>
+        
+        <div class="knob-group">
+          <div class="large-knob" data-setting="button1Speed">
+            <svg class="knob-svg" viewBox="0 0 60 60">
+              <defs>
+                <radialGradient id="knobGradient2" cx="30%" cy="30%">
+                  <stop offset="0%" stop-color="#f5f5f5"/>
+                  <stop offset="30%" stop-color="#ddd"/>
+                  <stop offset="60%" stop-color="#aaa"/>
+                  <stop offset="90%" stop-color="#777"/>
+                </radialGradient>
+              </defs>
+              <circle cx="30" cy="30" r="27" fill="url(#knobGradient2)" stroke="#333" stroke-width="3"/>
+              <g class="knob-indicator-group" transform-origin="30 30">
+                <rect x="28.5" y="6" width="3" height="18" rx="1.5" fill="#333"/>
+              </g>
+              <circle cx="30" cy="30" r="6" fill="url(#knobGradient2)" stroke="#222" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="knob-label">SPEED 1</div>
+          <div class="knob-value" id="speed1Value">1.0x</div>
+        </div>
+        
+        <div class="knob-group">
+          <div class="large-knob" data-setting="jumpInterval2">
+            <svg class="knob-svg" viewBox="0 0 60 60">
+              <defs>
+                <radialGradient id="knobGradient3" cx="30%" cy="30%">
+                  <stop offset="0%" stop-color="#f5f5f5"/>
+                  <stop offset="30%" stop-color="#ddd"/>
+                  <stop offset="60%" stop-color="#aaa"/>
+                  <stop offset="90%" stop-color="#777"/>
+                </radialGradient>
+              </defs>
+              <circle cx="30" cy="30" r="27" fill="url(#knobGradient3)" stroke="#333" stroke-width="3"/>
+              <g class="knob-indicator-group" transform-origin="30 30">
+                <rect x="28.5" y="6" width="3" height="18" rx="1.5" fill="#333"/>
+              </g>
+              <circle cx="30" cy="30" r="6" fill="url(#knobGradient3)" stroke="#222" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="knob-label">JUMP 2</div>
+          <div class="knob-value" id="jump2Value">30s</div>
+        </div>
+        
+        <div class="knob-group">
+          <div class="large-knob" data-setting="button2Speed">
+            <svg class="knob-svg" viewBox="0 0 60 60">
+              <defs>
+                <radialGradient id="knobGradient4" cx="30%" cy="30%">
+                  <stop offset="0%" stop-color="#f5f5f5"/>
+                  <stop offset="30%" stop-color="#ddd"/>
+                  <stop offset="60%" stop-color="#aaa"/>
+                  <stop offset="90%" stop-color="#777"/>
+                </radialGradient>
+              </defs>
+              <circle cx="30" cy="30" r="27" fill="url(#knobGradient4)" stroke="#333" stroke-width="3"/>
+              <g class="knob-indicator-group" transform-origin="30 30">
+                <rect x="28.5" y="6" width="3" height="18" rx="1.5" fill="#333"/>
+              </g>
+              <circle cx="30" cy="30" r="6" fill="url(#knobGradient4)" stroke="#222" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="knob-label">SPEED 2</div>
+          <div class="knob-value" id="speed2Value">0.5x</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- LED Indicators -->
+    <div class="led-section">
+      <div class="led-indicator" id="powerLed">
+        <div class="led-light"></div>
+        <div class="led-label">POWER</div>
+      </div>
+      <div class="led-indicator" id="activeLed">
+        <div class="led-light"></div>
+        <div class="led-label">ACTIVE</div>
+      </div>
+    </div>
+    
+    <!-- Stomp Switch -->
+    <div class="stomp-section">
+      <div class="stomp-switch" id="enableToggle">
+        <div class="stomp-surface">
+          <div class="stomp-label">ON/OFF</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bottom Controls -->
+    <div class="bottom-controls">
+      <div class="small-controls">
+        <button class="pedal-button" id="resetPosition">
+          <span class="button-text">RESET</span>
+        </button>
+        <button class="pedal-button primary" id="refreshPage">
+          <span class="button-text">REFRESH</span>
+        </button>
+      </div>
+      
+      <div class="input-output">
+        <div class="jack-container">
+          <div class="jack input-jack"></div>
+          <div class="jack-label">INPUT</div>
+        </div>
+        <div class="jack-container">
+          <div class="jack output-jack"></div>
+          <div class="jack-label">OUTPUT</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Hidden inputs for settings -->
+    <input type="hidden" id="jumpInterval1" value="30">
+    <input type="hidden" id="button1Speed" value="1">
+    <input type="hidden" id="jumpInterval2" value="30">
+    <input type="hidden" id="button2Speed" value="0.5">
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html> 
